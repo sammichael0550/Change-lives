@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Curved Background Shapes -->
+    <div class="curved-shape"></div>
+    <div class="curved-shape2"></div>
+
+    <!-- LOGIN FORM -->
+    <div class="form-box login">
+      <h2 class="animation" style="--li:1">Login</h2>
+
+      <form>
+        <div class="input-box animation" style="--li:2">
+          <input type="text" required>
+          <label>Username</label>
+          <i class='bx bxs-user i'></i>
+        </div>
+
+        <div class="input-box animation" style="--li:3">
+          <input type="password" required>
+          <label>Password</label>
+          <i class='bx bxs-lock-alt i'></i>
+        </div>
+
+        <div class="remember-forgot animation" style="--li:4">
+          <label><input type="checkbox" name="keepSignedIn"/><span class="custom-checkbox"></span>Keep Me Signed In</label>
+        </div>
+
+        <button class="btn animation" type="submit" style="--li:5">Login</button>
+
+        <div class="regi-link animation" style="--li:6">
+          <p>Don't have an account? <a href="#" class="SignUpLink">SignUp</a></p>
+        </div>
+      </form>
+    </div>
+
+    <!-- LOGIN SIDE TEXT -->
+    <div class="info-content login">
+      <h2 class="animation" style="--li:1">WELCOME BACK</h2>
+      <p class="animation" style="--li:2">Your Support Matters More Than Ever. Together,We're Weaving A Nationwide Safety Net For Palestinian Childrens.<br> <br>"Every Login, Every Donation, Every Action Counts". <br><br> #SolidarityIsAction</p>
+    </div>
+
+    <!-- REGISTER FORM -->
+    <div class="form-box Register">
+      <h2 class="animation" style="--li:1">Register</h2>
+
+      <form>
+        <div class="input-box animation" style="--li:2">
+          <input type="text" required>
+          <label>Username</label>
+          <i class='bx bxs-user i'></i>
+        </div>
+
+        <div class="input-box animation" style="--li:3">
+          <input type="password" required>
+          <label>Password</label>
+          <i class='bx bxs-lock-alt i'></i>
+        </div>
+
+        <button class="btn animation" style="--li:4" type="submit">Register</button>
+
+        <div class="regi-link animation" style="--li:5">
+          <p>Already have an account? <a href="#" class="SignInLink">Login</a></p>
+        </div>
+      </form>
+    </div>
+
+    <!-- REGISTER SIDE TEXT -->
+    <div class="info-content Register">
+      <h2 class="animation" style="--li:1">WELCOME!</h2>
+      <p class="animation" style="--li:2">Create Your Free Account To Provide Direct Humanitarian Aid To Palestinian Children In Crisis.<br><br> Together, We're Building A Nationwide Network Of Support One Donation, One Action, One Heart At A Time.</p>
+    </div>
+
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>
