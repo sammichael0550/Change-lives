@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #252525;
+}
+
+.container {
+    position: relative;
+    max-width: 750px;
+    width: 90%;
+    min-height: 450px;
+    background: #25252b;
+    border-radius: 12px;
+    border: 2px solid #bc0817;
+    box-shadow: 0 0 25px #bc0817;
+    overflow: hidden;
+}
+
+/* ===================== ANIMATION ===================== */
+.animation {
+    transform: translateX(120%);
+    opacity: 0;
+    filter: blur(20px);
+    transition: .8s ease;
+}
+
+.container:not(.active) .form-box.login .animation,
+.container:not(.active) .info-content.login .animation {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition-delay: calc(.08s * var(--li));
+}
+
+.container.active .form-box.login .animation,
+.container.active .info-content.login .animation {
+    transform: translateX(-120%);
+    opacity: 0;
+    filter: blur(20px);
+}
+
+.container.active .form-box.Register .animation,
+.container.active .info-content.Register .animation {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition-delay: calc(.08s * var(--li));
+}
+
+.container:not(.active) .form-box.Register .animation,
+.container:not(.active) .info-content.Register .animation {
+    transform: translateX(120%);
+    opacity: 0;
+    filter: blur(20px);
+}
+
+/* ===================== FORM POSITION ===================== */
+.form-box {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    padding: 0 60px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition: .6s ease;
+}
+
+.form-box.login { left: 0; }
+.form-box.Register { left: 100%; }
+
+.container.active .form-box.login { left: -100%; }
+.container.active .form-box.Register { left: 0; }
+
+.info-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    padding: 40px 40px 60px 150px;
+    transition: .6s ease;
+}
+
+.info-content.Register { right: 100%; }
+.container.active .info-content.Register { right: 0; }
+.container.active .info-content.login { right: -100%; }
+
+/* ===================== UI ELEMENTS ===================== */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #03c4f477;
+    outline: none;
+    font-size: 16px;
+    padding-right: 35px;
+}
+
+.input-box input:focus {
+    border-color: #bc0817;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #f8f5f5;
+    transition: .3s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -5px;
+    font-size: 13px;
+    color: #bc0817;
+}
+
+.input-box .i {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #bc0817;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid #bc0817;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ec6607;
+}
+
+.regi-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.regi-link a {
+    color: #bc0817;
+}
+
+/* ===================== CURVED BACKGROUND ===================== */
+.curved-shape,
+.curved-shape2 {
+    position: absolute;
+    height: 700px;
+    width: 850px;
+    transition: 1.5s ease;
+}
+
+.curved-shape {
+    right: 0;
+    top: -5px;
+    background: linear-gradient(45deg, #252525, #bc0817);
+    transform: rotate(10deg) skewY(40deg);
+    transform-origin: bottom right;
+}
+
+.container.active .curved-shape {
+    transform: rotate(0deg) skewY(0deg);
+}
+
+.curved-shape2 {
+    left: 300px;
+    top: 100%;
+    background: #252525;
+    border-top: 3px solid #bc0817;
+    transform: rotate(10deg) skewY(40deg);
+    transform-origin: bottom left;
+}
+
+.container.active .curved-shape2 {
+    transform: rotate(-11deg) skewY(-41deg);
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 900px) {
+    .form-box { padding: 0 40px; }
+    .info-content { padding: 30px 30px 50px 40px; }
+}
+
+@media (max-width: 768px) {
+    .container {
+        min-height: auto;
+        padding-bottom: 10px;
+    }
+    .form-box,
+    .info-content {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 18px 20px;
+        text-align: left;
+    }
+    .info-content {
+        order: -1; /* show above the form on small screens */
+        padding-top: 10px;
+    }
+    .curved-shape,
+    .curved-shape2 {
+        display: none; /* hide decorative curves on small screens */
+    }
+    h2 { font-size: 26px; }
+    .input-box input { height: 48px; }
+    .btn { height: 48px; }
+}
+
+@media (max-width: 420px) {
+    .info-content h2 { font-size: 20px; }
+    h2 { font-size: 20px; }
+    .form-box { padding: 14px; }
+    .info-content { padding: 12px; }
+    .regi-link { font-size: 13px; }
+}
+

@@ -1,8 +1,11 @@
-function toggleMenu(){
-    let menu = document.getElementById("menuList");
-    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-}
+const container = document.querySelector('.container');
+const loginlink = document.querySelector('.SignInLink');
+const registerlink = document.querySelector('.SignUpLink');
 
-function scrollToDonate(){
-    document.querySelector("#donate").scrollIntoView({ behavior: "smooth" });
-}
+registerlink.addEventListener('click', () => {
+    container.classList.add('active');
+});
+
+loginlink.addEventListener('click', () => {
+    container.classList.remove('active');
+});

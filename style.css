@@ -12,7 +12,9 @@ html{
 
 body{
     background:white;
+
     padding-top: 70px;
+
 }
 
 .main-container{
@@ -24,13 +26,11 @@ body{
 }
 
 header{
-    grid-column: 1/ -1;
-    position:fixed;
+    position:sticky;
     top:0;
-    left: 0;
-    height: 80px;
-    width:100%;
-    z-index: index 1000;
+    z-index: 1000;
+ 
+    
 }
 
 header nav{
@@ -38,8 +38,9 @@ header nav{
     background-color:transparent;
     display:flex;
     align-items:center;
+    
     justify-content:space-between;
-      background:rgba(7, 243, 168, 0.1);/*transparent*/
+    background:rgba(7, 243, 168, 0.1);/*transparent*/
     backdrop-filter:blur(12px);         /*the blur effect*/
 -webkit-backdrop-filter:blur(12px); /*safari support*/
 }
@@ -95,7 +96,7 @@ header button {
     }
 
 }
-.Donate-btn {
+.login-btn {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -103,20 +104,18 @@ header button {
     background: greenyellow;
     color: black;
     text-decoration: none;
+    font-size: 16px;
     border-radius: 8px;
     font-weight: bold;
 }
 
-.Donate-btn img {
-    width: 20px;
-    height: 20px;
-}
 
-.Donate-btn {
+
+.login-btn {
     transition: 0.3s ease;
 }
 
-.Donate-btn:hover {
+.login-btn:hover {
     transform: scale(1.06);
     opacity: 0.9;
 }
@@ -132,6 +131,7 @@ header button {
     grid-template-rows: 1fr 1fr;
     max-width: 100%;
     padding: 1em;
+    margin-top: 60px;
 }
 
 .content {
@@ -197,7 +197,7 @@ cursor: pointer;
     height: 100%;
     background:url(images/web.jpg) no-repeat center;
     background-size: cover;
-    position: relative;
+    position:relative;
     border-radius: 2em;
     animation: slider 10s linear infinite;
 }
