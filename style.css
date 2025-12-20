@@ -12,6 +12,9 @@ html{
 
 body{
     background:white;
+
+    padding-top: 70px;
+
 }
 
 .main-container{
@@ -56,7 +59,6 @@ header nav ul {
     display: flex;
     gap: 2rem;
     padding: 1em;
-    background-color: red;
     border-radius: 1em;
     display: none;
 
@@ -68,13 +70,13 @@ header nav ul {
         text-decoration: none;
         font-size: 1rem;
         font-weight: bold;
-        color: white;
+        color: #1e3a8a;
     }
 
 }
 
 header nav ul a:hover {
-    border-block-end: 2px solid white;
+    border-block-end: 2px solid #1e3a8a;
 }
 
 header button {
@@ -180,7 +182,7 @@ cursor: pointer;
  .content .btn img {
     width: 30px;
     height: 30px;
-    background-color: #1f3a5f;
+    background-color: #89b8f6;
     border-radius: 50%;
  }
 
@@ -257,7 +259,6 @@ main .gallery::before {
     }
 }
 
-/* ABOUT */
 .about{
     margin-top: 0;
     padding: 35px;
@@ -379,4 +380,34 @@ margin-bottom: 20px;
 
 .mid{
     transform: scale(1.1);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 25px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+
+  font-size: 14px;
+  color: #333;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  color: #4CAF50; /* matches your donate button */
+   transform: scale(1.06);
+    opacity: 0.9;
 }
