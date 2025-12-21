@@ -13,8 +13,6 @@ html{
 body{
     background:white;
 
-    padding-top: 70px;
-
 }
 
 .main-container{
@@ -386,24 +384,32 @@ margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 15px 25px;
-  background-color: #f9f9f9;
+  background-color:whitesmoke;
   border-top: 1px solid #ddd;
-
+bottom: 0;
   font-size: 14px;
   color: #333;
-}
+  width: 100%;
+} 
 
 .footer-links {
   display: flex;
   gap: 20px;
+  padding-right:10px ;
+ 
+}
+.footer h5{
+    padding-left:10px ;
+    font-size:15px;
 }
 
 .footer-links a {
   text-decoration: none;
   color: #555;
   font-weight: 500;
+    font-size: 15px;
+    padding-top:17px;
+    padding-bottom: 17px;
 }
 
 .footer-links a:hover {
