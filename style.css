@@ -376,6 +376,62 @@ margin-bottom: 20px;
     opacity: 0.9;
 }
 
+/* ===== PAYMENT BUTTONS ===== */
+
+.pay-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Ghana Mobile Money */
+.pay-btn.momo {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+/* Bank Account */
+.pay-btn.bank {
+  background-color: #2e7d32;
+  color: #fff;
+}
+
+/* ===== DONATE MODAL ===== */
+
+.donate-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.donate-modal-content {
+  background: #fff;
+  padding: 25px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top:80px;
+  font-size: 100px;
+  cursor: pointer;
+  color:yellow ;
+}
+
 .mid{
     transform: scale(1.1);
 }

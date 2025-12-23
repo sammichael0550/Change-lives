@@ -1,99 +1,110 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en"> 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>palastinian people</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
     <div class="main-container">
+
         <header>
             <nav>
                 <div class="logo">
                     ScriptKid <span>Acadamy</span>
                 </div>
-                 <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#photo hub">Photo Hub</a></li>
-                <li><a href="#donate">Support</a></li>
-                <li><a href="#help">Help</a></li>
-            </ul>
-<a href="login.html" class="login-btn">
-   
-    My Account</a>
-</nav>
-</header>
 
-<main class="hero">
-    <div class="content">
-        <h1>Change <span>Lives</span>  
-            <br> With Your Gift
-        </h1>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#photo hub">Photo Hub</a></li>
+                    <li><a href="#donate">Support</a></li>
+                    <li><a href="#help">Help</a></li>
+                </ul>
 
-        <p>"There Is No Childhood For Us" Inside the desperate situation for the Palestinian children,Helping Hands Can Change the world.Join ScriptKid to support children and families in need.</p>
+                <a href="login.html" class="login-btn">
+                    My Account
+                </a>
+            </nav>
+        </header>
 
-        <div class="btn">
-            <button>Discover Now</button>
-            <img src="images/play.png" alt="">
-        </div>
+        <main class="hero">
+            <div class="content">
+                <h1>Change <span>Lives</span><br> With Your Gift</h1>
+
+                <p>
+                    "There Is No Childhood For Us" Inside the desperate situation for the Palestinian children,
+                    Helping Hands Can Change the world.Join ScriptKid to support children and families in need.
+                </p>
+
+                <div class="btn">
+                    <button>Discover Now</button>
+                    <img src="images/play.png" alt="">
+                </div>
+            </div>
+
+            <div class="gallery"></div>
+        </main>
+
     </div>
-
-    <div class="gallery"></div>
-</main>
-</div>
 
     <section id="About" class="About">
         <h2>Why ScriptKid Helps</h2>
-            <p>
+        <p>
             ScriptKid works to bring hope, education, and basic needs to children who are facing 
             difficult living conditions. Your donation can bring food, medical care, education, 
             and a brighter future.
         </p>
-    
+    </section>
+
     <section class="photo Hub" id="phone hub">
         <h2 class="photo-tittle">Moments of Hope</h2>
 
         <div class="photo-container">
             <div class="photo-card">
-            <img src="img/1.jpg" alt="Hope Moment 1">
-            </div>
-            
-            <div class="photo-card">
-            <img src="img/2.jpg" alt="Hope Moment 1">
+                <img src="img/1.jpg" alt="Hope Moment 1">
             </div>
 
             <div class="photo-card">
-            <img src="img/3.jpg" alt="Hope Moment 3">
+                <img src="img/2.jpg" alt="Hope Moment 1">
+            </div>
+
+            <div class="photo-card">
+                <img src="img/3.jpg" alt="Hope Moment 3">
             </div>
         </div>
     </section>
 
-        <section class="donate-section">
-            <div class="container">
-                <h2>Support The Mission</h2>
+    <section class="donate-section">
+        <div class="container">
+            <h2>Support The Mission</h2>
 
+            <div class="donate-card">
                 <div class="donate-card">
-                    <div class="donate-card">
                     <h3>$5</h3>
                     <p>Provide One Meal For A Child.</p>
-                    <button>Donate</button>
+                    <button onclick="openDonateModal(5)">Donate</button>
                 </div>
 
                 <div class="donate-card">
                     <h3>$20</h3>
-                <p>School Supplies And Books.</p>
-                <button>Donate</button>
+                    <p>School Supplies And Books.</p>
+                    <button onclick="openDonateModal(20)">Donate</button>
                 </div>
-                
+
                 <div class="donate-card">
                     <h3>$50</h3>
-                <p>Medical Treatment.</p>
-                <button>Donate</button>
+                    <p>Medical Treatment.</p>
+                    <button onclick="openDonateModal(50)">Donate</button>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
     <footer class="footer">
         <h5>@ 2025 ScriptKid</h5>
@@ -104,8 +115,31 @@
         </div>
     </footer>
 
+    <!-- PAYMENT MODAL -->
 
-      <script src="script.js"></script>
+    <div id="donateModal" class="donate-modal">
+        <div class="donate-modal-content">
+            <span class="close-btn" onclick="closeDonateModal()">&times;</span>
+
+            <h3>Choose Payment Method</h3>
+            <p id="donationText"></p>
+
+            <!-- Ghana Mobile Money -->
+            <a id="momoLink" class="pay-btn momo" target="_blank">
+                Pay with Mobile Money (Ghana)
+            </a>
+
+            <!-- Bank Account -->
+            <a id="bankLink" class="pay-btn bank">
+                Pay via Bank Account
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
+
+
 
